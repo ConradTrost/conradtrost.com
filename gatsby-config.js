@@ -3,7 +3,7 @@ module.exports = {
     title: "conradtrost.com",
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
+    `gatsby-plugin-nodejs`,
     "gatsby-plugin-postcss",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
@@ -16,5 +16,13 @@ module.exports = {
       },
       __key: "images",
     },
+  {
+    resolve: "gatsby-plugin-react-svg",
+    options: {
+      rule: {
+        include: /images/
+      }
+    }
+  },
   ],
 };

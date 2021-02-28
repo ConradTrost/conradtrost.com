@@ -1,0 +1,56 @@
+/* ./src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.button {
+    @apply p-3; 
+    @apply bg-gradient-to-br;
+    @apply from-light-accent;
+    @apply to-accent;
+    @apply text-white;
+    @apply my-2;
+    @apply transform;
+    @apply hover:scale-105;
+    @apply duration-200;
+}
+
+
+:root {
+    --primary: #222222;
+    --primary-text: #f6f6f6;
+    --accent: #20d1b4;
+    --light-accent: #00b7ff;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('https://fonts.googleapis.com/css?family=Playfair+Display');
+}
+
+html {
+  font-family: 'Playfair Display';
+}
+
+/* Default Font Settings */
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 22px;
+}
+/* --- Default Font Settings */
+
+.heroSVG {
+    transform: scale(1.5);
+}
