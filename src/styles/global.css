@@ -6,11 +6,12 @@
 
 .button {
     @apply p-3; 
+    @apply rounded;
     @apply bg-gradient-to-br;
     @apply from-light-accent;
     @apply to-accent;
-    @apply text-white;
-    @apply my-2;
+    @apply text-black;
+    @apply my-4;
     @apply transform;
     @apply hover:scale-105;
     @apply duration-200;
@@ -18,10 +19,13 @@
 
 
 :root {
-    --primary: #222222;
-    --primary-text: #f6f6f6;
-    --accent: #20d1b4;
-    --light-accent: #00b7ff;
+    --primary: white;
+    /* --primary: #1f8391; */
+    /* --primary-text: #f6f6f6; */
+    --primary-text: #000;
+    --secondary-text: #3a3a3a;
+    --accent: #00b7ff;
+    --light-accent: #20d1b4;
 }
 
 @font-face {

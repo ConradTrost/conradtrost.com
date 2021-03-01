@@ -4,7 +4,7 @@ import HeroSVG from '../images/hero-svg.svg';
 
 export default function Hero() {
     return (
-        <div className="h-96 bg-gradient-to-br from-red-400 to-red-500 w-full flex p-20 overflow-hidden">
+        <div className="h-96 bg-white w-full flex p-20 overflow-hidden">
             <div className="w-8/12">
                 <h1><span className="underline">Develop</span> Your Online Presence.</h1>
                 <h3>Secure, Responsive, and Modern Websites<br />Customized for your needs.</h3>

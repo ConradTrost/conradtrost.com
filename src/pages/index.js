@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
+import Home from '../components/Home';
 
 // markup
 const IndexPage = () => {
@@ -17,6 +18,8 @@ const IndexPage = () => {
       <Navbar />
 
       <Hero />
+
+      <Home />
 
       <Footer />
 
