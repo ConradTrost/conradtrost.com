@@ -31,14 +31,16 @@ export default function Home() {
     return (
         <div>
 
-            <div className="w-full bg-white flex p-8">
+            <div className="w-full bg-black flex p-8">
                 {skills.map((x) => {
                     return(
-                    <div className="m-8 w-4/12">
-                        <div className="w-full h-full bg-white p-3">
-                            <h3 className="text-black">{x.name}</h3>
-                            <p className="text-secondary-text">{x.description}</p>
-                            <FastForwardSVG className="w-8" />
+                    <div className="mx-8 w-4/12">
+                        <div className="w-full p">
+                            <div className="flex align-middle justify-center">
+                                <h4 className="text-white inline mr-4">{x.name}</h4>
+                                <FastForwardSVG className="w-4 inline nextSVG" />
+                            </div>
+                            <p className="text-white opacity-80 text-center">{x.description}</p>
                         </div>
                     </div>
                 )})}
@@ -46,14 +48,10 @@ export default function Home() {
 
             {/* Section 3 */}
             {/* <div className="w-full bg-gradient-to-r from-blue-400 to-purple-600 grid grid-cols-2 p-20"> */}
-            <div className="w-full bg-white grid grid-cols-2 p-20">
+            <div className="w-full bg-white p-20 flex">
 
-                <div>
-
-                </div>
-
-                <div>
-                    <h2 >Get Started Today</h2>
+                <div className="m-auto text-center">
+                    <h2 className="">Get Started Today</h2>
 
                     <p className="mb-4">Upgrade to the newest and fastest tech stacks seamlessly.</p>
 
