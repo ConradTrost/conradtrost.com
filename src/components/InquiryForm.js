@@ -15,28 +15,30 @@ export default function InquiryForm() {
     }
 
     return (
-        <div>
-             <form className="w-6/12 m-auto flex " id="form" method="post" netlify-honeypot="bot-field" data-netlify="true" name="inquiry" onSubmit={((e) => handleSubmit)} >
-                <input type="hidden" name="bot-field" />
-                <input type="hidden" name="form-name" value="contact" />
+        <div className="flex p-40">
+            <div className="w-6/12 m-auto">
+                <form className="w-full" id="form" method="post" netlify-honeypot="bot-field" data-netlify="true" name="inquiry" onSubmit={((e) => handleSubmit)} >
+                    <input type="hidden" name="bot-field" />
+                    <input type="hidden" name="form-name" value="contact" />
 
-                <input className="w-5/12" type="email" name="email" placeholder="JohnDoe@mail.com" />
+                    <input className="w-full p-4 border border-black-600 rounded m-4" type="text" name="name" placeholder="John Doe" />
 
-                <input className="w-5/12" type="text" name="name" placeholder="John Doe" />
+                    <input className="w-full p-4 border border-gray rounded m-4" type="email" name="email" placeholder="johndoe@gmail.com" />
 
-                <select className="block">
-                    <option value="develop">Website Development</option>
-                    <option value="collaborate">Invitation to Collaborate</option>
-                    <option value="contract">Freelance Work</option>
-                    <option value="job">Job Opening</option>
-                </select>
+                    <select className="w-full p-4 border border-gray rounded m-4">
+                        <option value="develop" selected>Website Development</option>
+                        <option value="collaborate">Invitation to Collaborate</option>
+                        <option value="contract">Freelance Work</option>
+                        <option value="job">Job Opening</option>
+                    </select>
 
 
-                <input className="block" type="text" name="message" placeholder="Enter your inquiry here..." />
+                    <input className="w-full p-4 border border-gray rounded m-4" type="text" name="message" placeholder="Enter your inquiry here..." />
 
-                <input type="submit" name="submit" />
+                    <input type="submit" name="submit" className="button w-full m-4" />
 
-            </form>
+                </form>
+            </div>
         </div>
     )
 }

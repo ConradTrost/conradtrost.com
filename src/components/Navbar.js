@@ -12,6 +12,7 @@ export default function Navbar() {
             <div className="flex align-middle">
                 <a href="/app/github" className="border-b border-transparent transform duration-500 hover:border-black inline text-2xl mx-2">Repos</a>
                 <a href="https://trost.dev" className="border-b border-transparent transform duration-500 inline text-2xl ml-2 hover:border-black">Portfolio</a>
+                <a href="/inquiry" className="border-b border-transparent transform duration-500 inline text-2xl ml-2 hover:border-black">Contact</a>                
             </div>
         </div>
     )
