@@ -20,7 +20,7 @@ export default function InquiryForm() {
                 <h1 className="my-4 sm:my-0">Fill out this form to contact me</h1>
                 <form className="w-full" id="ContactForm" method="post" netlify-honeypot="bot-field" data-netlify="true" name="inquiry" onSubmit={((e) => handleSubmit)} >
                     <input type="hidden" name="bot-field" />
-                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="form-name" value="inquiry" />
 
                     <input className="w-full p-4 border border-black-600 rounded sm:my-4" type="text" name="name" placeholder="John Doe" />
 
