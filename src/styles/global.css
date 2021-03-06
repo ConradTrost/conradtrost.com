@@ -9,7 +9,8 @@
     @apply rounded;
     @apply bg-black;
     @apply text-white;
-    @apply my-4;
+    @apply my-6;
+    @apply sm:my-4;
     @apply transform;
     @apply hover:scale-105;
     @apply duration-200;
@@ -37,20 +38,39 @@ html {
 
 /* Default Font Settings */
 h1 {
-    font-size: 48px;
+    font-size: 32px;
 }
 
 h2 {
-    font-size: 38px;
+    font-size: 24px;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 22px;
 }
 
 h4 {
-    font-size: 22px;
+    font-size: 18px;
 }
+
+@media only screen and (min-width: 412px) {
+    h1 {
+    font-size: 48px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+}
+
 /* --- Default Font Settings */
 
 .heroSVG {

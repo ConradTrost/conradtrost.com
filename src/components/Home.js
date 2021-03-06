@@ -31,16 +31,16 @@ export default function Home() {
     return (
         <div>
 
-            <div className="w-full bg-black flex p-8">
+            <div className="w-full bg-black sm:flex p-2 sm:p-8">
                 {skills.map((x) => {
                     return(
-                    <div className="mx-8 w-4/12">
-                        <div className="w-full p">
-                            <div className="flex align-middle justify-center">
-                                <h4 className="text-white inline mr-4">{x.name}</h4>
+                    <div className="mx-8 sm:w-4/12">
+                        <div className="p">
+                            <div className="flex align-middle justify-center my-2">
+                                <h4 className="text-white sm:inline mr-4">{x.name}</h4>
                                 <FastForwardSVG className="w-4 inline nextSVG" />
                             </div>
-                            <p className="text-white opacity-80 text-center">{x.description}</p>
+                            <p className="text-white opacity-80 text-center hidden sm:block">{x.description}</p>
                         </div>
                     </div>
                 )})}
@@ -48,7 +48,7 @@ export default function Home() {
 
             {/* Section 3 */}
             {/* <div className="w-full bg-gradient-to-r from-blue-400 to-purple-600 grid grid-cols-2 p-20"> */}
-            <div className="w-full bg-white p-20 flex">
+            <div className="w-full bg-white py-10 p-4 sm:p-20 sm:flex">
 
                 <div className="m-auto text-center">
                     <h2 className="">Get Started Today</h2>
@@ -57,11 +57,11 @@ export default function Home() {
 
                     {/* Tech SVG Section */}
                     {/* <div className="flex justify-start items-end"> */}
-                    <div className="flex">
-                        <GatsbySVG className="h-8 mr-4" />
-                        <ReactSVG className="h-8 mx-4" />
-                        <NodeSVG className="h-8 mx-4" />
-                        <TailwindSVG className="h-6 mx-4" />
+                    <div className="sm:flex">
+                        <GatsbySVG className="h-8 m-auto my-2 sm:mr-4" />
+                        <ReactSVG className="h-8 m-auto my-2 sm:mx-4" />
+                        <NodeSVG className="h-8 m-auto my-2 sm:mx-4" />
+                        <TailwindSVG className="h-6 m-auto my-2 sm:mx-4" />
                     </div>
 
                     <button className="button">Get Started</button>

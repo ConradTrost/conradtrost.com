@@ -15,17 +15,18 @@ export default function InquiryForm() {
     }
 
     return (
-        <div className="flex p-40">
-            <div className="w-6/12 m-auto">
+        <div className="flex sm:p-10 mt-10 sm:m-0">
+            <div className="w-10/12 sm:w-6/12 m-auto">
+                <h1 className="my-4 sm:my-0">Fill out this form to contact me</h1>
                 <form className="w-full" id="form" method="post" netlify-honeypot="bot-field" data-netlify="true" name="inquiry" onSubmit={((e) => handleSubmit)} >
                     <input type="hidden" name="bot-field" />
                     <input type="hidden" name="form-name" value="contact" />
 
-                    <input className="w-full p-4 border border-black-600 rounded m-4" type="text" name="name" placeholder="John Doe" />
+                    <input className="w-full p-4 border border-black-600 rounded sm:my-4" type="text" name="name" placeholder="John Doe" />
 
-                    <input className="w-full p-4 border border-gray rounded m-4" type="email" name="email" placeholder="johndoe@gmail.com" />
+                    <input className="w-full p-4 border border-gray rounded my-4" type="email" name="email" placeholder="johndoe@gmail.com" />
 
-                    <select className="w-full p-4 border border-gray rounded m-4">
+                    <select className="w-full bg-transparent p-4 border border-gray rounded my-4">
                         <option value="develop" selected>Website Development</option>
                         <option value="collaborate">Invitation to Collaborate</option>
                         <option value="contract">Freelance Work</option>
@@ -33,9 +34,9 @@ export default function InquiryForm() {
                     </select>
 
 
-                    <input className="w-full p-4 border border-gray rounded m-4" type="text" name="message" placeholder="Enter your inquiry here..." />
+                    <input className="w-full p-4 border border-gray rounded my-4" type="text" name="message" placeholder="Enter your inquiry here..." />
 
-                    <input type="submit" name="submit" className="button w-full m-4" />
+                    <input type="submit" name="submit" className="button w-full my-4" />
 
                 </form>
             </div>
