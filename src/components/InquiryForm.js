@@ -4,7 +4,7 @@ export default function InquiryForm() {
 
     const handleSubmit = (e) => {
     e.preventDefault()
-    let myForm = document.getElementById('pizzaOrder');
+    let myForm = document.getElementById('ContactForm');
     let formData = new FormData(myForm)
     fetch('/', {
         method: 'POST',
@@ -18,7 +18,7 @@ export default function InquiryForm() {
         <div className="flex sm:p-10 mt-10 sm:m-0">
             <div className="w-10/12 sm:w-6/12 m-auto">
                 <h1 className="my-4 sm:my-0">Fill out this form to contact me</h1>
-                <form className="w-full" id="form" method="post" netlify-honeypot="bot-field" data-netlify="true" name="inquiry" onSubmit={((e) => handleSubmit)} >
+                <form className="w-full" id="ContactForm" method="post" netlify-honeypot="bot-field" data-netlify="true" name="inquiry" onSubmit={((e) => handleSubmit)} >
                     <input type="hidden" name="bot-field" />
                     <input type="hidden" name="form-name" value="contact" />
 
@@ -26,8 +26,8 @@ export default function InquiryForm() {
 
                     <input className="w-full p-4 border border-gray rounded my-4" type="email" name="email" placeholder="johndoe@gmail.com" />
 
-                    <select className="w-full bg-transparent p-4 border border-gray rounded my-4">
-                        <option value="develop" selected>Website Development</option>
+                    <select defaultValue="develop" className="w-full bg-transparent p-4 border border-gray rounded my-4">
+                        <option value="develop">Website Development</option>
                         <option value="collaborate">Invitation to Collaborate</option>
                         <option value="contract">Freelance Work</option>
                         <option value="job">Job Opening</option>
