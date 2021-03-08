@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "conradtrost.com",
+    title: "Freelance Web Development by Conrad Trost",
+    image: "/src/images/meta-headshot.jpg",
   },
   plugins: [
     `gatsby-plugin-nodejs`,
