@@ -80,3 +80,16 @@ h4 {
 .nextSVG {
     fill: white;
 }
+
+.CloseMenu {
+    animation: menuCloser 1s cubic-bezier(0,0,0.2,1);
+}
+
+@keyframes menuCloser {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}

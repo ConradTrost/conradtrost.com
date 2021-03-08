@@ -10,6 +10,9 @@ module.exports = {
         accent: 'var(--accent)',
         'light-accent': 'var(--light-accent)',
     },
+      animation: {
+        'spin-once': 'spin 1s linear',
+      }
     },
   },
   variants: {

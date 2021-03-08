@@ -5,6 +5,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-nodejs`,
     "gatsby-plugin-postcss",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: 'src/images/programming.png',
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",

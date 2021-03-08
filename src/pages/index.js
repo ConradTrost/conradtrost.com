@@ -11,7 +11,7 @@ const IndexPage = () => {
       <div>
         <main className="bg-primary min-h-screen">
         <Helmet>
-            <title>Home Page</title>
+            <title>Freelance Web Development by Conrad Trost</title>
         </Helmet>
 
         <Hero />

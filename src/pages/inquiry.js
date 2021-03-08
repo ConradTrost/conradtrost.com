@@ -9,7 +9,7 @@ export default function inquiry() {
         <div>
             <Helmet>
                 <title>
-                    Inquiries
+                    Inquiries - Conrad Trost
                 </title>
             </Helmet>
 

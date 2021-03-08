@@ -34,7 +34,7 @@ export default function Home() {
                         <div className="p">
                             <div className="flex align-middle justify-start sm:justify-center my-2">
                                 <h4 className="text-white sm:inline mr-4">{x.name}</h4>
-                                <FastForwardSVG className="w-4 inline nextSVG" />
+                                <FastForwardSVG className="w-4 h-7 inline nextSVG" />
                             </div>
                             <p className="text-white opacity-80 text-left  sm:block">{x.description}</p>
                         </div>
