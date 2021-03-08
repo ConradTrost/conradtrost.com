@@ -26,7 +26,8 @@ export default function InquiryForm() {
 
                     <input className="w-full p-4 border border-gray rounded my-4" type="email" name="email" placeholder="johndoe@gmail.com" />
 
-                    <select defaultValue="develop" className="w-full bg-transparent p-4 border border-gray rounded my-4">
+                    <select defaultValue="selected" className="w-full bg-transparent p-4 border border-gray rounded my-4">
+                        <option selected="selected">Select Your Reason for Contacting...</option>
                         <option value="develop">Website Development</option>
                         <option value="collaborate">Invitation to Collaborate</option>
                         <option value="contract">Freelance Work</option>

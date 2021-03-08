@@ -2,21 +2,19 @@ import React from 'react'
 import { Helmet } from'react-helmet';
 
 // Import components
+import Layout from '../layouts/Layout';
 import InquiryForm from '../components/InquiryForm';
-import Navbar from '../components/Navbar';
-
 
 export default function inquiry() {
     return (
-        <div>
+        <Layout>
             <Helmet>
                 <title>
                     Inquiries
                 </title>
             </Helmet>
-            <Navbar />
 
             <InquiryForm />
-        </div>
+        </Layout>
     )
 }

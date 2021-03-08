@@ -1,29 +1,25 @@
 import React from 'react';
 
 // Import SVGs
-import GatsbySVG from '../images/Gatsby-Logo.svg';
+import GatsbySVG from '../images/Gatsby_Monogram_Black.svg';
 import ReactSVG from '../images/React-icon.svg';
 import NodeSVG from '../images/Nodejs_logo.svg';
-import TailwindSVG from '../images/Tailwind-Logo.svg';
+import TailwindSVG from '../images/Tailwind.svg';
 import FastForwardSVG from '../images/fast-forward.svg'
 
 
 const skills = [
     {
-        name: 'Gatsby.js',
-        level: 6,
-        url: 'https://gatsbyjs.com/',
-        description: 'A static-site generator used to create fast and secure websites with pre-populated information.'
+        name: 'Fast & Secure',
+        description: 'All websites are built with Gatsby.js, a static site generator that produces fortified websites with next-gen speed optimization.'
     },
     {
-        name: 'React.js',
-        level: 7,
-        url: 'https://reactjs.com/',
-        description: 'Used to create quick, component-based, dynamic web apps that only loads the components necessary.'
+        name: 'Content Management',
+        description: 'Want the power to add blogs, update your team, and more? Content management is added with the website for easy adjustment.'
     },
     {
-        name: 'SEO',
-        description: 'Adept at Google Tracking and Search Engine Optimization.'
+        name: 'Online Presence',
+        description: 'Analytics tracking and SEO optionally included. Rank highly on search engines and see tracking data using Google Analytics.'
     }
 ];
 
@@ -34,13 +30,13 @@ export default function Home() {
             <div className="w-full bg-black sm:flex p-2 sm:p-8">
                 {skills.map((x) => {
                     return(
-                    <div className="mx-8 sm:w-4/12">
+                    <div className="mx-8 my-8  sm:w-4/12">
                         <div className="p">
-                            <div className="flex align-middle justify-center my-2">
+                            <div className="flex align-middle justify-start sm:justify-center my-2">
                                 <h4 className="text-white sm:inline mr-4">{x.name}</h4>
                                 <FastForwardSVG className="w-4 inline nextSVG" />
                             </div>
-                            <p className="text-white opacity-80 text-center hidden sm:block">{x.description}</p>
+                            <p className="text-white opacity-80 text-left  sm:block">{x.description}</p>
                         </div>
                     </div>
                 )})}
@@ -50,21 +46,21 @@ export default function Home() {
             {/* <div className="w-full bg-gradient-to-r from-blue-400 to-purple-600 grid grid-cols-2 p-20"> */}
             <div className="w-full bg-white py-10 p-4 sm:p-20 sm:flex">
 
-                <div className="m-auto text-center">
+                <div className="m-auto text-center mb-10">
                     <h2 className="">Get Started Today</h2>
 
                     <p className="mb-4">Upgrade to the newest and fastest tech stacks seamlessly.</p>
 
                     {/* Tech SVG Section */}
                     {/* <div className="flex justify-start items-end"> */}
-                    <div className="sm:flex">
-                        <GatsbySVG className="h-8 m-auto my-2 sm:mr-4" />
-                        <ReactSVG className="h-8 m-auto my-2 sm:mx-4" />
-                        <NodeSVG className="h-8 m-auto my-2 sm:mx-4" />
-                        <TailwindSVG className="h-6 m-auto my-2 sm:mx-4" />
+                    <div className="flex justify-center">
+                        <GatsbySVG className="h-8 w-8  my-2 mx-4" />
+                        <ReactSVG className="h-8 my-2 mx-4" />
+                        <NodeSVG className="h-8 m-auto my-2 mx-4" />
+                        <TailwindSVG className="h-8 w-8 m-auto my-2 mx-4" />
                     </div>
 
-                    <button className="button">Get Started</button>
+                    <a href="http://localhost:8000/inquiry"><button className="button">Get Started</button></a>
                 </div>
             </div>
         </div>

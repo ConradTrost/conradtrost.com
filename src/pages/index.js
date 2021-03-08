@@ -2,29 +2,26 @@ import * as React from "react"
 import { Helmet } from 'react-helmet';
 
 // Components
-import Navbar from '../components/Navbar';
+import Layout from '../layouts/Layout';
 import Hero from '../components/Hero';
-import Footer from '../components/Footer';
 import Home from '../components/Home';
 
 // markup
 const IndexPage = () => {
   return (
+      <Layout>
     <main className="bg-primary min-h-screen">
       <Helmet>
         <title>Home Page</title>
       </Helmet>
 
-      <Navbar />
-
       <Hero />
 
       <Home />
 
-      <Footer />
-
     </main>
+    </Layout>
   )
 }
 
-export default IndexPage
+export default IndexPage;
