@@ -60,7 +60,7 @@ export default function Home() {
                         <TailwindSVG className="h-8 w-8 m-auto my-2 mx-4" />
                     </div>
 
-                    <a href="http://localhost:8000/inquiry"><button className="button">Get Started</button></a>
+                    <a href="http://conradtrost.com/inquiry"><button className="button">Get Started</button></a>
                 </div>
             </div>
         </div>
