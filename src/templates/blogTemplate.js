@@ -10,14 +10,18 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
   let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid;
   return (
-    <div className="blog-post-container container mx-auto">
+    <div className="blog-post-container mb-40 mx-auto w-6/12">
       <Helmet>
-        <title>{frontmatter.title}</title>
+        <title>{frontmatter.title} - {}</title>
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:type" content="blog" />
+        <meta property="og:description" content={frontmatter.metaDescription} />
+        <meta property="og:image" content={featuredImgFluid} />
       </Helmet>
       <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
         <Img fluid={featuredImgFluid} />
-        <h2>{frontmatter.date}</h2>
+        <h1>{frontmatter.title}</h1>
+        <h4>Written by {frontmatter.author}, {frontmatter.date}</h4>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -34,9 +38,11 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        author
+        metaDescription
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 100) {
+            fluid(maxWidth: 1600) {
               ...GatsbyImageSharpFluid
             }
           }
