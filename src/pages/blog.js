@@ -10,7 +10,7 @@ const ArchivePage = ({
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
-  return <div className="container mx-auto py-10 grid grid-cols-3">{Posts}</div>
+  return <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">{Posts}</div>
 }
 export default ArchivePage;
 
@@ -20,7 +20,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 80)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             slug

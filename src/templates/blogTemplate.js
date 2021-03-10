@@ -10,18 +10,18 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
   let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid;
   return (
-    <div className="blog-post-container mb-40 mx-auto w-6/12">
+    <div className="blog-post-container mb-40 mx-auto p-4 sm:w-6/12">
       <Helmet>
-        <title>{frontmatter.title} - {}</title>
+        <title>{frontmatter.title} - {frontmatter.author}</title>
         <meta property="og:title" content={frontmatter.title} />
         <meta property="og:type" content="blog" />
         <meta property="og:description" content={frontmatter.metaDescription} />
         <meta property="og:image" content={featuredImgFluid} />
       </Helmet>
-      <div className="blog-post">
-        <Img fluid={featuredImgFluid} />
+      <div className="blog-post container">
         <h1>{frontmatter.title}</h1>
-        <h4>Written by {frontmatter.author}, {frontmatter.date}</h4>
+        <p className="mb-4">Written by {frontmatter.author}, {frontmatter.date}</p>
+        <Img fluid={featuredImgFluid} />
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}

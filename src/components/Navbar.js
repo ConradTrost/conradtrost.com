@@ -15,7 +15,7 @@ export default function Navbar() {
     }
 
     return (
-        <div className="flex justify-between py-2 px-2 sm:px-12 text-primary-text items-center relative top-0 left-0">
+        <div className="flex justify-between py-2 px-2 sm:px-12 text-primary-text items-center relative top-0 left-0 mb-4">
             <div>
                 <a href="/">
                     <p className="navbar-brand flex text-2xl">Conrad Trost</p>
