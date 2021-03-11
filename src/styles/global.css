@@ -85,6 +85,19 @@ h4 {
     animation: menuCloser 1s cubic-bezier(0,0,0.2,1);
 }
 
+pre {
+    background: rgb(228, 228, 228);
+    padding: 6px;
+    border-radius: 4px;
+    margin: 10px auto;
+    font-size: 12px;
+}
+
+code {
+    background: rgb(228, 228, 228);
+    padding: 0 4px;
+}
+
 @keyframes menuCloser {
     from {
         transform: rotate(0deg);

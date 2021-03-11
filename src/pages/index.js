@@ -5,7 +5,14 @@ import { Helmet } from 'react-helmet';
 import Hero from '../components/Hero';
 import Home from '../components/Home';
 
-// markup
+
+// To do:
+// Add FontAwesome support -> Add LinkedIn, GitHub, etc.
+// Decide if worth it to add backend functionality past Netlify
+// Gatsby V3 Capabilities? Utilize new image features 
+// Page for past projects (need more)
+//
+
 const IndexPage = () => {
   return (
       <div>

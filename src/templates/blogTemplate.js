@@ -16,14 +16,19 @@ export default function Template({
         <meta property="og:title" content={frontmatter.title} />
         <meta property="og:type" content="blog" />
         <meta property="og:description" content={frontmatter.metaDescription} />
-        <meta property="og:image" content={featuredImgFluid} />
+        <meta property="og:image" content={`https://conradtrost.com${frontmatter.featuredImage.childImageSharp.original.src}`} />
       </Helmet>
+      <Helmet
+      meta={{
+        property: `og:image`,
+        content: `https://www.localhost:8000/${frontmatter.featuredImage.childImageSharp.original.src}`
+      }} />
       <div className="blog-post container">
         <h1>{frontmatter.title}</h1>
         <p className="mb-4">Written by {frontmatter.author}, {frontmatter.date}</p>
         <Img fluid={featuredImgFluid} />
         <div
-          className="blog-post-content"
+          className="blog-post-content mb-40" 
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
@@ -44,6 +49,9 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 1600) {
               ...GatsbyImageSharpFluid
+            }
+            original {
+              src
             }
           }
         }
