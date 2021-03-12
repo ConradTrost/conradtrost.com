@@ -10,8 +10,8 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
   let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid;
   return (
-    <div className="bg-gradient-to-tr from-gray-100 to-gray-600 p-0 sm:p-10">
-      <div className="blog-post-container mx-auto p-4 sm:w-6/12 shadow-xl rounded bg-white mb-20">
+    <div className="bg-gradient-to-tr from-gray-100 to-gray-600 pb-10 sm:p-10">
+      <div className="blog-post-container mx-auto p-4 sm:w-6/12 sm:shadow-xl rounded bg-white sm:mb-20">
         <Helmet>
           <title>{frontmatter.title} - {frontmatter.author}</title>
           <meta property="og:title" content={frontmatter.title} />

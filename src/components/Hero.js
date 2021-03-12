@@ -8,7 +8,7 @@ export default function Hero() {
             <div className="z-10 sm:w-8/12">
                 <h1><span className="z-10 underline">Develop</span> Your Online Presence.</h1>
                 <h3 className="z-10">Secure, Responsive, and Modern Websites<br />Customized for your needs.</h3>
-                <a href="https://conradtrost.com/inquiry"><button className="w-full sm:w-auto my-6 rounded  button transform hover:scale-105 z-10">Get in Touch</button></a>
+                <a href="https://conradtrost.com/inquiry"><button className="w-full sm:w-auto button z-10">Get in Touch</button></a>
             </div>
 
                 <HeroSVG className="heroSVG w-4/12 hidden sm:inline z-0" />
