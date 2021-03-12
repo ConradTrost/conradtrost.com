@@ -10,27 +10,24 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
   let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid;
   return (
-    <div className="blog-post-container mb-40 mx-auto p-4 sm:w-6/12">
-      <Helmet>
-        <title>{frontmatter.title} - {frontmatter.author}</title>
-        <meta property="og:title" content={frontmatter.title} />
-        <meta property="og:type" content="blog" />
-        <meta property="og:description" content={frontmatter.metaDescription} />
-        <meta property="og:image" content={`https://conradtrost.com${frontmatter.featuredImage.childImageSharp.original.src}`} />
-      </Helmet>
-      <Helmet
-      meta={{
-        property: `og:image`,
-        content: `https://www.localhost:8000/${frontmatter.featuredImage.childImageSharp.original.src}`
-      }} />
-      <div className="blog-post container">
-        <h1>{frontmatter.title}</h1>
-        <p className="mb-4">Written by {frontmatter.author}, {frontmatter.date}</p>
-        <Img fluid={featuredImgFluid} />
-        <div
-          className="blog-post-content mb-40" 
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+    <div className="bg-gradient-to-tr from-gray-100 to-gray-600 p-0 sm:p-10">
+      <div className="blog-post-container mx-auto p-4 sm:w-6/12 shadow-xl rounded bg-white mb-20">
+        <Helmet>
+          <title>{frontmatter.title} - {frontmatter.author}</title>
+          <meta property="og:title" content={frontmatter.title} />
+          <meta property="og:type" content="blog" />
+          <meta property="og:description" content={frontmatter.metaDescription} />
+          <meta property="og:image" content={`https://conradtrost.com${frontmatter.featuredImage.childImageSharp.original.src}`} />
+        </Helmet>
+        <div className="blog-post container">
+          <h1>{frontmatter.title}</h1>
+          <p className="mb-4">Written by {frontmatter.author}, {frontmatter.date}</p>
+          <Img fluid={featuredImgFluid} />
+          <div
+            className="blog-post-content mb-40" 
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </div>
       </div>
     </div>
   )

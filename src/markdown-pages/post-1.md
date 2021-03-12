@@ -1,28 +1,20 @@
 ---
-slug: "/blog/a-blog-once-made"
-date: "2021-03-10"
-title: "A Blog Once Made"
+slug: "/blog/who-am-i"
+date: "2021-03-11"
+title: "Who Am I?"
 author: "Conrad Trost"
-metaDescription: "Hello, my name is Conrad Trost and this is a quick and easy meta description"
+metaDescription: "The answer just might be inside this article"
 featuredImage: "../images/meta-headshot.jpg"
 ---
 
-# Welcome
+## Welcome to Me.
 
-Hello, this is my first blog post I have created and posted to this website.
-There isn't really a purpose for this post, I'm just testing using markdown files to generate blog posts on a Gatsby-powered website.
-It's actually quite easy and I will probably release a blog on how to go about doing that.
+Hello, my name is Conrad Trost. I am a freelance web developer focused on MERN stack (specifically Gatsby.js).
 
-See you later!\
+## I Am Not Passionate About Web Dev.
 
+Let me start by stating that I am not specifically passionate about web development. I am passionate about expanding a company, or persons, reach into the virtual world. Whether it be e-Commerce, services, B2B sales, local musicians, an artists portfolio... It's about *visibility*. That's what I do. Let me explain...
 
-I wonder if I can format this by using back-ticks as code blocks.
+The rest of the world is progressing and having a website is now a necessity. Not just any website though, it needs to be fast. It needs to be competitive. I am just the person that establishes that. I have found that I have a knack for it, actually. Making things fast is what I'm good at.
 
-run `npm install gatsby-plugin-image` 
-
-
-```
-function(e) {
-    myBtn.onClick(alert(e.target.value));
-}
-```
+## 

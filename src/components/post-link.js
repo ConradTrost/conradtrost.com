@@ -13,7 +13,7 @@ const PostLink = ({ post }) => (
       <h3>{post.frontmatter.title}</h3>
       <p>{post.frontmatter.author}, {post.frontmatter.date}</p>
     </Link>
-      <p>{post.excerpt}... <Link to={post.frontmatter.slug}><p className="link underline text-blue-600">Read More »</p></Link></p>
+      <p>{post.frontmatter.metaDescription ? post.frontmatter.metaDescription : post.excerpt}... <Link to={post.frontmatter.slug}><p className="link underline text-blue-600">Read More »</p></Link></p>
   </div>
 )
 export default PostLink;

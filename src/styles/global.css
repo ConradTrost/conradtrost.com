@@ -34,6 +34,7 @@
 
 html {
   font-family: 'Playfair Display';
+  line-height: 1.4;
 }
 
 /* Default Font Settings */
@@ -43,6 +44,7 @@ h1 {
 
 h2 {
     font-size: 24px;
+    @apply my-2;
 }
 
 h3 {
@@ -53,17 +55,26 @@ h4 {
     font-size: 18px;
 }
 
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color: #272727;
+}
+
+.blog-post p {
+    margin: 10px 0;
+}
+
 @media only screen and (min-width: 412px) {
     h1 {
     font-size: 48px;
     }
 
     h2 {
-        font-size: 38px;
+        font-size: 32px;
     }
 
     h3 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     h4 {
