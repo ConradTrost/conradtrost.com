@@ -12,7 +12,7 @@ module.exports = {
     },
       animation: {
         'spin-once': 'spin 1s linear',
-      }
+      },
     },
   },
   variants: {

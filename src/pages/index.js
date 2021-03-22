@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet';
 // Components
 import Hero from '../components/Hero';
 import Home from '../components/Home';
-import ArchivePage from './blog';
 
 
 // To do:

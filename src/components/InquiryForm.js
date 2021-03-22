@@ -17,7 +17,7 @@ export default function InquiryForm() {
     return (
         <div className="flex sm:p-10 mt-10 sm:m-0">
             <div className="w-10/12 sm:w-6/12 m-auto">
-                <h1 className="my-4 sm:my-0">Fill out this form to contact me</h1>
+                <h1 className="my-4 sm:my-0">Contact me!</h1>
                 <form className="w-full" id="ContactForm" method="post" action="/success/" netlify-honeypot="bot-field" data-netlify="true" name="inquiry" onSubmit={((e) => handleSubmit)} >
                     <input type="hidden" name="bot-field" />
                     <input type="hidden" name="form-name" value="inquiry" />

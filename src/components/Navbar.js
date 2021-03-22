@@ -1,18 +1,35 @@
 import React, { useState } from 'react';
 
 import MenuSVG from '../images/menu.svg';
-import CloseMenuSVG from '../images/letter-x.svg';
+import MobileMenu from './MobileMenu';
+import Menu from './Menu';
 
 export default function Navbar() {
     const [menu, setMenu] = useState(false);
+    const [sizer, setSizer] = useState(true);
     
     const menuToggle = () => {
-        if (menu == true) {
+        var mobMenu = document.querySelector('#mobMenu');
+        if (menu === true) {
             setMenu(false);
+            mobMenu.classList.remove('animate-menu');
+            mobMenu.classList.add('close-menu');
         } else {
             setMenu(true);
+            mobMenu.classList.remove('close-menu');
+            mobMenu.classList.add('animate-menu');
         }
     }
+
+    const changeWindowSize = () => {
+        if (window.innerWidth > 640) {
+            setSizer(false);
+        } else {
+            setSizer(true);
+        }
+    }
+
+    window.addEventListener('resize', changeWindowSize);
 
     return (
         <div className="flex justify-between py-2 px-2 sm:px-12 text-primary-text items-center relative top-0 left-0 mb-4">
@@ -23,16 +40,9 @@ export default function Navbar() {
                 </a>
             </div>
             <div className="flex align-middle">
-                {menu ? <button onClick={menuToggle} className="m-2 sm:hidden"><CloseMenuSVG className="CloseMenu w-6 h-6 " /></button> : <button onClick={menuToggle} className="m-2 sm:hidden"><MenuSVG className="w-10" /></button>}
-                <div className="transform duration-400 w-full sm:p-0 absolute border left-0 top-20 rounded m-0 bg-white z-50 sm:border-none sm:m-0 sm:static sm:bg-transparent">
-                    <ul className={
-                        menu ? 'flex justify-around p-4' : 'hidden sm:block'
-                        }>
-                        <li className="inline m-2"><a href="https://trost.dev" className="border-b border-transparent transform duration-500 inline text-2xl ml-2 hover:border-black">Portfolio</a></li>
-                        <li className="inline m-2"><a href="/blog" className="border-b border-transparent transform duration-500 inline text-2xl ml-2 hover:border-black">Blog</a></li>
-                        <li className="inline m-2"><a href="/inquiry" className="border-b border-transparent transform duration-500 inline text-2xl ml-2 hover:border-black">Contact</a></li>
-                    </ul>      
-                </div>        
+                {sizer ? <button onClick={menuToggle} aria-label="open-menu" className="m-2"><MenuSVG className="w-10" /></button> : ''}
+                {console.log(changeWindowSize)}
+                {sizer ? <MobileMenu handleClick={menuToggle} /> : <Menu /> }
             </div>
         </div>
     )
