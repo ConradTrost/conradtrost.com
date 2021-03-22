@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import MenuSVG from '../images/menu.svg';
 import MobileMenu from './MobileMenu';
@@ -29,7 +29,20 @@ export default function Navbar() {
         }
     }
 
-    window.addEventListener('resize', changeWindowSize);
+    // window.addEventListener('resize', changeWindowSize);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            window.addEventListener('DOMContentLoaded', changeWindowSize);
+            window.addEventListener('resize', changeWindowSize);
+          }
+        return() => {
+            if (typeof window !== 'undefined') {
+                window.removeEventListener('resize', changeWindowSize);
+                window.removeEventListener('DOMContentLoaded', changeWindowSize);
+              }
+        }
+    }, [])
 
     return (
         <div className="flex justify-between py-2 px-2 sm:px-12 text-primary-text items-center relative top-0 left-0 mb-4">
@@ -41,7 +54,6 @@ export default function Navbar() {
             </div>
             <div className="flex align-middle">
                 {sizer ? <button onClick={menuToggle} aria-label="open-menu" className="m-2"><MenuSVG className="w-10" /></button> : ''}
-                {console.log(changeWindowSize)}
                 {sizer ? <MobileMenu handleClick={menuToggle} /> : <Menu /> }
             </div>
         </div>
