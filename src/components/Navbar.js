@@ -33,13 +33,12 @@ export default function Navbar() {
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            window.addEventListener('DOMContentLoaded', changeWindowSize);
+            changeWindowSize();
             window.addEventListener('resize', changeWindowSize);
           }
         return() => {
             if (typeof window !== 'undefined') {
                 window.removeEventListener('resize', changeWindowSize);
-                window.removeEventListener('DOMContentLoaded', changeWindowSize);
               }
         }
     }, [])

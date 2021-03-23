@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 export default function Hero() {
     return (
-        <div className="sm:h-4/6 bg-white sm:w-11/12 sm:m-auto md:flex p-10 overflow-hidden z-10 sm:overflow-visible items-center">
+        <div className="sm:h-4/6 bg-white sm:w-11/12 sm:m-auto md:flex p-10 sm:pt-0 overflow-hidden z-10 sm:overflow-visible items-center">
             <div className="z-10 md:w-7/12">
                 <h1><span className="z-10 underline">Develop</span> Your Online Presence.</h1>
                 <h2 className="z-10 text-gray-800">Secure, Responsive, and Modern Websites<br />Customized for your needs.</h2>
