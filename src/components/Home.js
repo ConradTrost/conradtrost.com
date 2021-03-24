@@ -26,7 +26,6 @@ const skills = [
 export default function Home() {
     return (
         <div>
-
             <div className="w-full bg-black sm:flex p-2 sm:p-8">
                 {skills.map((x) => {
                     return(
@@ -42,8 +41,6 @@ export default function Home() {
                 )})}
             </div>
 
-            {/* Section 3 */}
-            {/* <div className="w-full bg-gradient-to-r from-blue-400 to-purple-600 grid grid-cols-2 p-20"> */}
             <div className="w-full bg-white py-10 p-4 sm:p-20 sm:flex">
 
                 <div className="m-auto text-center mb-10">
@@ -52,7 +49,6 @@ export default function Home() {
                     <p className="mb-4">Upgrade to the newest and fastest tech stacks seamlessly.</p>
 
                     {/* Tech SVG Section */}
-                    {/* <div className="flex justify-start items-end"> */}
                     <div className="flex justify-center">
                         <GatsbySVG className="h-8 w-8  my-2 mx-4" />
                         <ReactSVG className="h-8 my-2 mx-4" />
