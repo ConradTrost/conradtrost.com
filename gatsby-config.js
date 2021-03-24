@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: "https://conradtrost.com",
     title: "Freelance Web Development",
     titleTemplate: "%s · Conrad Trost",
     description:

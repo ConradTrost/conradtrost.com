@@ -5,10 +5,9 @@
 
 
 .button {
-    @apply p-4; 
+    @apply p-2; 
     @apply rounded;
     @apply bg-black;
-    @apply text-white;
     @apply my-6;
     @apply sm:my-4;
     @apply transform;
@@ -66,6 +65,11 @@ p {
 
 .blog-post p {
     margin: 10px 0;
+}
+
+.subheader {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 @media only screen and (min-width: 412px) {
@@ -144,6 +148,7 @@ p {
     right: 0;
     top: 0;
     margin: 20px;
+    fill: #fff;
 }
 
 pre {

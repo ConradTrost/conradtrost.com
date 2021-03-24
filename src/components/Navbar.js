@@ -29,8 +29,6 @@ export default function Navbar() {
         }
     }
 
-    // window.addEventListener('resize', changeWindowSize);
-
     useEffect(() => {
         if (typeof window !== 'undefined') {
             changeWindowSize();
@@ -44,17 +42,17 @@ export default function Navbar() {
     }, [])
 
     return (
-        <div className="flex justify-between py-2 px-2 sm:px-12 text-primary-text items-center relative top-0 left-0 mb-4">
+        <div className="flex justify-between p-2 sm:px-12 text-primary-text items-center left-0 z-50 fixed right-0 top-0 bg-white">
             <div>
                 <a href="/">
-                    <p className="navbar-brand flex text-2xl">Conrad Trost</p>
-                    <p className="navbar-subBrand opacity-70 text-xs">Freelance Web Developer</p>
+                    <p className="navbar-brand flex text-2xl text-black">Conrad Trost</p>
+                    <p className="navbar-subBrand opacity-70 text-xs text-black">Freelance Web Developer</p>
                 </a>
             </div>
             <div className="flex align-middle">
-                {sizer ? <button onClick={menuToggle} aria-label="open-menu" className="m-2"><MenuSVG className="w-10" /></button> : ''}
+                {sizer ? <button onClick={menuToggle} aria-label="open-menu" className="m-2 menu-toggle"><MenuSVG className="w-10" /></button> : ''}
                 {sizer ? <MobileMenu handleClick={menuToggle} /> : <Menu /> }
             </div>
         </div>
     )
-}
+};

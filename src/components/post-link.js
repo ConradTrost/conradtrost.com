@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
-import Img from "gatsby-image";
+import Img from "gatsby-plugin-image";
 
 const PostLink = ({ post }) => (
 
-  <div className="m-4">
+  <div className="m-4 mt-14">
     <Link to={post.frontmatter.slug}>
       <Img 
         fluid={post.frontmatter.featuredImage.childImageSharp.fluid} 
