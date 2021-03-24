@@ -9,6 +9,11 @@ import "@fontsource/lato";
 export default function ({ children }) {
     return (
         <div className="min-h-screen relative overflow-hidden">
+            <Helmet
+            htmlAttributes={{
+                lang: 'en',
+                }}
+            />
             <Navbar />
             {children}
             <Footer />
