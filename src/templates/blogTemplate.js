@@ -1,14 +1,14 @@
 import React from "react";
 import { Helmet } from 'react-helmet';
 import { graphql } from "gatsby";
-import Img from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
-  let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid;
+  let featuredImgFluid = getImage(frontmatter.featuredImage);
   return (
     <div className="bg-gradient-to-tr from-gray-100 to-gray-600 pb-10 sm:p-10">
       <div className="blog-post-container mx-auto p-4 sm:w-6/12 sm:shadow-xl rounded bg-white sm:mb-20">
@@ -19,10 +19,10 @@ export default function Template({
           <meta property="og:description" content={frontmatter.metaDescription} />
           <meta property="og:image" content={`https://conradtrost.com${frontmatter.featuredImage.childImageSharp.original.src}`} />
         </Helmet>
-        <div className="blog-post container">
+        <div className="blog-post container mt-14">
           <h1>{frontmatter.title}</h1>
           <p className="mb-4">Written by {frontmatter.author}, {frontmatter.date}</p>
-          <Img fluid={featuredImgFluid} />
+          <GatsbyImage image={featuredImgFluid} title={frontmatter.title}  />
           <div
             className="blog-post-content mb-40" 
             dangerouslySetInnerHTML={{ __html: html }}
@@ -44,9 +44,10 @@ export const pageQuery = graphql`
         metaDescription
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 1600) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
             original {
               src
             }

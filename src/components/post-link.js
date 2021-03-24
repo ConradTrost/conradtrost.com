@@ -1,13 +1,17 @@
 import React from "react";
 import { Link } from "gatsby";
-import Img from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const PostLink = ({ post }) => (
 
+const PostLink = ({ post }) => {
+
+  let featuredImage = getImage(post.frontmatter.featuredImage);
+
+  return (
   <div className="m-4 mt-14">
     <Link to={post.frontmatter.slug}>
-      <Img 
-        fluid={post.frontmatter.featuredImage.childImageSharp.fluid} 
+      <GatsbyImage 
+        image={featuredImage}
         title={post.frontmatter.title}
       />
       <h3>{post.frontmatter.title}</h3>
@@ -15,5 +19,5 @@ const PostLink = ({ post }) => (
     </Link>
       <p>{post.frontmatter.metaDescription ? post.frontmatter.metaDescription : post.excerpt}... <Link to={post.frontmatter.slug}><p className="link underline text-blue-600">Read More »</p></Link></p>
   </div>
-)
+  )}
 export default PostLink;

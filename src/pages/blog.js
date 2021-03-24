@@ -29,9 +29,10 @@ export const pageQuery = graphql`
             metaDescription
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 600) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
             }
           }
