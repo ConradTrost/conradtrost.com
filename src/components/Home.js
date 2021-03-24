@@ -29,7 +29,7 @@ export default function Home() {
             <div className="w-full bg-black sm:flex p-2 sm:p-8">
                 {skills.map((x) => {
                     return(
-                    <div className="mx-8 my-8  sm:w-4/12">
+                    <div key={x.name} className="mx-8 my-8  sm:w-4/12">
                         <div className="p">
                             <div className="flex align-middle justify-start sm:justify-center my-2">
                                 <h3 className="text-white sm:inline mr-4">{x.name}</h3>

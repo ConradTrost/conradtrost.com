@@ -72,6 +72,14 @@ p {
     font-size: 20px;
 }
 
+.navbar p, .navbar a {
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
 @media only screen and (min-width: 412px) {
     h1 {
     font-size: 84px;

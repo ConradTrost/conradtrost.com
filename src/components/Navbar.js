@@ -42,7 +42,7 @@ export default function Navbar() {
     }, [])
 
     return (
-        <div className="flex justify-between p-2 sm:px-12 text-primary-text items-center left-0 z-50 fixed right-0 top-0 bg-white">
+        <div className="navbar flex justify-between p-2 sm:px-12 text-primary-text items-center left-0 z-50 fixed right-0 top-0 bg-white">
             <div>
                 <a href="/">
                     <p className="navbar-brand flex text-2xl text-black">Conrad Trost</p>
@@ -50,7 +50,7 @@ export default function Navbar() {
                 </a>
             </div>
             <div className="flex align-middle">
-                {sizer ? <button onClick={menuToggle} aria-label="open-menu" className="m-2 menu-toggle"><MenuSVG className="w-10" /></button> : ''}
+                {sizer ? <button onClick={menuToggle} aria-label="open-menu" className="m-2 menu-toggle"><MenuSVG className="w-12" /></button> : ''}
                 {sizer ? <MobileMenu handleClick={menuToggle} /> : <Menu /> }
             </div>
         </div>
